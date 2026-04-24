@@ -1,0 +1,253 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #e8eefc;
+  background:
+    radial-gradient(circle at top left, rgba(124, 131, 253, 0.18), transparent 30%),
+    radial-gradient(circle at top right, rgba(94, 234, 212, 0.14), transparent 28%),
+    linear-gradient(180deg, #0b1020 0%, #121a30 100%);
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+  background: rgba(11, 16, 32, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* LOGO */
+.custom-navbar .navbar-brand {
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #5eead4;
+}
+
+/* LINK */
+.custom-navbar .nav-link {
+  color: #e8eefc;
+  font-weight: 600;
+  position: relative;
+  transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #5eead4;
+}
+
+.custom-navbar .nav-link.active {
+  color: white;
+}
+
+/* LINEA ANIMATA */
+.custom-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  bottom: 4px;
+  width: calc(100% - 16px);
+  height: 2px;
+  background: linear-gradient(90deg, #5eead4, #60a5fa);
+  transform: scaleX(0);
+  transition: 0.3s;
+}
+
+.custom-navbar .nav-link:hover::after,
+.custom-navbar .nav-link.active::after {
+  transform: scaleX(1);
+}
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-badge {
+  background: rgba(94, 234, 212, 0.1);
+  border: 1px solid rgba(94, 234, 212, 0.3);
+  padding: 8px 16px;
+  border-radius: 999px;
+  color: #5eead4;
+  font-weight: bold;
+}
+
+.hero-note {
+  color: #a9b7d3;
+}
+
+.profile-img {
+  max-width: 350px;
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.profile-img:hover {
+  transform: translateY(-5px);
+}
+
+/* ===== SEZIONI ===== */
+.section-alt {
+  background: rgba(255,255,255,0.02);
+}
+
+.section-title {
+  font-weight: 700;
+}
+
+/* ===== CARD ===== */
+.feature-card,
+.project-card,
+.contact-card,
+.cv-sidebar,
+.cv-main {
+  background: rgba(19, 28, 51, 0.9);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px;
+  padding: 1.5rem;
+  transition: 0.3s;
+}
+
+.feature-card:hover,
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+/* ===== SKILLS ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.skill-card {
+  background: rgba(96, 165, 250, 0.1);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+
+.skill-card:hover {
+  background: rgba(96, 165, 250, 0.2);
+}
+
+/* ===== BOTTONI ===== */
+.btn {
+  border-radius: 12px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #5eead4, #60a5fa);
+  border: none;
+  color: #000;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.btn-outline-light {
+  color: white;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.btn-outline-info {
+  border-color: #5eead4;
+  color: #5eead4;
+}
+
+.btn-outline-info:hover {
+  background: rgba(94, 234, 212, 0.1);
+}
+
+/* ===== PROGETTI ===== */
+.project-card ul {
+  padding-left: 1.2rem;
+}
+
+.project-card a {
+  color: #5eead4;
+}
+
+.project-card a:hover {
+  color: white;
+}
+
+/* ===== FORM ===== */
+.form-control {
+  background: #121a30;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: white;
+}
+
+.form-control:focus {
+  border-color: #5eead4;
+  box-shadow: 0 0 0 0.2rem rgba(94, 234, 212, 0.2);
+}
+
+/* ===== FOOTER ===== */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  text-align: center;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #e8eefc;
+}
+
+.footer-links a:hover {
+  color: #5eead4;
+}
+
+/* ===== CV ===== */
+.cv-sidebar,
+.cv-main {
+  padding: 2rem;
+}
+
+.cv-role {
+  color: #5eead4;
+}
+
+.cv-block {
+  margin-bottom: 1.5rem;
+}
+
+.cv-meta {
+  color: #60a5fa;
+  font-weight: bold;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}
